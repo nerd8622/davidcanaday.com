@@ -7,15 +7,15 @@ body {
   width: 100%;
   background-color: #1D3557;
 }
-.icon {float: left; padding: 0px 14px; margin: 0;}
-.header p {margin: 0px;}
-.header a {text-decoration: none;}
-.header p, .header a {
+.icon {float: left; padding: 0px 14px;}
+.header p, .icon {margin: 0px;}
+.navbar {text-decoration: none;}
+.header p, .navbar {
   float: left;
   color: #F1FAEE;
   padding: 14px 20px;
 }
-.header p, .header a, .footer a {
+.header p, .navbar, .footer a {
   display: block;
   text-align: center;
 }
