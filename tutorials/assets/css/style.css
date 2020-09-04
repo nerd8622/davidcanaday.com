@@ -7,7 +7,7 @@ body {
   width: 100%;
   background-color: #1D3557;
 }
-.icon {background-image: url("assets/images/home.svg"); padding: 0px 14px; background-size: 100%;}
+.icon {background-image: url("assets/images/home.svg"); padding: 0px 14px; background-size: auto;}
 .header p, .icon {margin: 0px;}
 .header a {text-decoration: none;}
 .header p, .header a {
