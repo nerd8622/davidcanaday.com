@@ -7,15 +7,15 @@ body {
   width: 100%;
   background-color: #1D3557;
 }
-.icon {float: left; padding: 0px 14px;}
+.icon {background-image: "assets/images/home.svg"; padding: 0px 14px;}
 .header p, .icon {margin: 0px;}
-.navbar {text-decoration: none;}
-.header p, .navbar {
+.header a {text-decoration: none;}
+.header p, .header a {
   float: left;
   color: #F1FAEE;
   padding: 14px 20px;
 }
-.header p, .navbar, .footer a {
+.header p, .header a, .footer a {
   display: block;
   text-align: center;
 }
