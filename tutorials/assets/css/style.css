@@ -1,6 +1,6 @@
 body {
-  background-color: #A8DADC;
   margin: 0;
+  background: linear-gradient(45deg, #A8DADC, #74B9BB) fixed;
 }
 .header {overflow: hidden;}
 .header, .footer {
