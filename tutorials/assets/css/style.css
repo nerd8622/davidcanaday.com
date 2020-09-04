@@ -1,7 +1,18 @@
-.header, .footer {
+.header {
   background-color: #104e8b;
-  position: fixed;
+  overflow: hidden;
   width: 100%;
 }
-.footer {bottom: 0;}
-.header {top: 0;}
+.header a {
+  float: left;
+  color: #fffaf0;
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.header a:hover {
+  background-color: #1874cd;
+}
+.footer {bottom: 0; width: 100%;}
+
