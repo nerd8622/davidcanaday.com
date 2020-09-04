@@ -1,7 +1,7 @@
-.header {
+.header, .footer {
   background-color: #104e8b;
+  position: fixed;
   width: 100%;
 }
-.footer {
-  bottom: 0;
-}
+.footer {bottom: 0;}
+.header {top: 0;}
