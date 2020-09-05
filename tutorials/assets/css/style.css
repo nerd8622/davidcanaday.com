@@ -1,20 +1,24 @@
 body {
   margin: 0;
-  background: linear-gradient(45deg, #A8DADC, #74B9BB) fixed;
+  background: linear-gradient(-45deg, #D3EDEE, #F1FAEE) fixed;
+}
+p,h1 {
+  padding-left: 1%;
+  padding right: 1%;
 }
 .header {overflow: hidden;}
 .header, .footer {
   width: 100%;
   background-color: #1D3557;
 }
-.icon {background-image: url("assets/images/home.svg"); padding: 0px 14px; background-position: center; background-size: cover;}
 .header p, .icon {margin: 0px;}
-.header a {text-decoration: none;}
-.header p, .header a {
+.navbar {text-decoration: none;}
+.header p, .navbar {
   float: left;
   color: #F1FAEE;
   padding: 14px 20px;
 }
+.icon {float:left; background-image: url("assets/images/home.png"); padding: 0px 14px; height:100%; width: 40px; background-attachment: fixed; background-position: center; background-size: cover;}
 .header p, .header a, .footer a {
   display: block;
   text-align: center;
