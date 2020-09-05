@@ -28,6 +28,4 @@ function getText(){
         }
     }
 }
-
-getText();
     
