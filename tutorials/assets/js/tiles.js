@@ -1,25 +1,12 @@
-function getText(){
-    var request = new XMLHttpRequest();
-    request.open('GET', 'assets/other/tiles.txt', true);
-    request.send(null);
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            var type = request.getResponseHeader('Content-Type');
-            if (type.indexOf("text") !== 1) {
-                return request.responseText;
-            }
-        }
-    }
-}
-
-function createTiles(){
-    var tiles = getText();
-    tiles = tiles.split('\n');
-    var tile = document.createElement("DIV");
-    var x, text, img;
-    for (x in tiles) {
-	x = x.split(',');
-        text, img = x[0], x[1];
+function createTiles(file){
+    file = file.split('\n');
+    var x; var text; var img;
+    for (x in file) {
+    	var tile = document.createElement("DIV");
+    	tile.id="content-item";
+	x = file[x].split(',');
+        text = x[0]; 
+        img = x[1];
 	image = document.createElement("IMG");
 	image.src = img;
 	tile.appendChild(image);
@@ -28,5 +15,19 @@ function createTiles(){
     } 
 }
 
-createTiles()
+function getText(){
+    var request = new XMLHttpRequest();
+    request.open('GET', 'assets/other/tiles.txt', true);
+    request.send(null);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            var type = request.getResponseHeader('Content-Type');
+            if (type.indexOf("text") !== 1) {
+                createTiles(request.responseText);
+            }
+        }
+    }
+}
+
+getText();
     
