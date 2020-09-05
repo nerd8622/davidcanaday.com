@@ -20,7 +20,7 @@ p,h1 {
   padding: 14px 20px;
 }
 .icon {float:left; background-image: url("assets/images/home.png"); padding: 0px 14px; height:100%; width: 40px; background-attachment: fixed; background-position: center; background-size: cover;}
-.content {}
+#content {}
 .content-item {
   float: left;
   box-shadow: 2px 2px;
