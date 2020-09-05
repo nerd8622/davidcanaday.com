@@ -3,7 +3,7 @@ function createTiles(file){
     var x; var text; var img;
     for (x in file) {
     	var tile = document.createElement("DIV");
-    	tile.class="content-item";
+    	tile.className="content-item";
 	x = file[x].split(',');
         text = x[0]; 
         img = x[1];
