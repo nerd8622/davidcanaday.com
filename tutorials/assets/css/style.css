@@ -22,7 +22,7 @@ p,h1 {
 .content {}
 .content-item {
   float: left;
-  box-shadow: 2px;
+  box-shadow: 2px 2px;
 }
 .header p, .header a, .footer a {
   display: block;
