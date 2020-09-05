@@ -13,8 +13,8 @@ p,h1 {
 }
 #logo {font-family: 'Exo 2', sans-serif;}
 .header p, .icon {margin: 0px;}
-.navbar {text-decoration: none;}
-.header p, .navbar {
+.header a {text-decoration: none;}
+.header p, .header a {
   float: left;
   color: #F1FAEE;
   padding: 14px 20px;
