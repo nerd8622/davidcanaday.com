@@ -11,6 +11,7 @@ p,h1 {
   width: 100%;
   background-color: #1D3557;
 }
+#icon {padding: 14px 10px;}
 #logo {font-family: 'Exo 2', sans-serif;}
 .header p {margin: 0px;}
 .header a {text-decoration: none;}
@@ -19,7 +20,6 @@ p,h1 {
   color: #F1FAEE;
   padding: 14px 20px;
 }
-.icon {float:left; background-image: url("assets/images/home.png"); padding: 0px 14px; height:100%; width: 40px; background-attachment: fixed; background-position: center; background-size: cover;}
 #content {}
 .content-item {
   float: left;
