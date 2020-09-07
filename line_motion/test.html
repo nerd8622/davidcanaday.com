@@ -6,26 +6,21 @@
   <div id="graph"></div>
   <script>
     var frames = [
-  {name: 'sine', data: [{x: [], y: []}]},
-  {name: 'cosine', data: [{x: [], y: []}]},
-  {name: 'circle', data: [{x: [], y: []}]},
+  {name: 'velocity', data: [{x: [], y: []}]},
+  {name: 'speed', data: [{x: [], y: []}]}
 ];
 
 var n = 100;
 for (var i = 0; i < n; i++) {
   var t = i / (n - 1) * 2 - 1;
   
-  // A sine wave:
-  frames[0].data[0].x[i] = t * Math.PI;
-  frames[0].data[0].y[i] = Math.sin(t * Math.PI);
+  // velocity:
+  frames[0].data[0].x[i] = t;
+  frames[0].data[0].y[i] = t**3+2*t+1;
   
-  // A cosine wave:
-  frames[1].data[0].x[i] = t * Math.PI;
-  frames[1].data[0].y[i] = Math.cos(t * Math.PI);
-  
-  // A circle:
-  frames[2].data[0].x[i] = Math.sin(t * Math.PI);
-  frames[2].data[0].y[i] = Math.cos(t * Math.PI);
+  // speed:
+  frames[1].data[0].x[i] = t;
+  frames[1].data[0].y[i] = Math.abs(t**3+2*t+1);
 }
 
 Plotly.plot('graph', [{
@@ -33,13 +28,12 @@ Plotly.plot('graph', [{
   y: frames[0].data[0].y,
   line: {simplify: false},
 }], {
-  xaxis: {range: [-Math.PI, Math.PI]},
-  yaxis: {range: [-1.2, 1.2]},
+  xaxis: {range: [-10, 10]},
+  yaxis: {range: [-15, 15]},
   updatemenus: [{
     buttons: [
       {method: 'animate', args: [['sine']], label: 'sine'},
-      {method: 'animate', args: [['cosine']], label: 'cosine'},
-      {method: 'animate', args: [['circle']], label: 'circle'}
+      {method: 'animate', args: [['cosine']], label: 'cosine'}
     ]
   }]
 }, {displayModeBar: false}).then(function() {
