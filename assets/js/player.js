@@ -4,7 +4,7 @@ function createPlayer(){
   ytId = "hQfNtnKm5nA";
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api";
-  var first = document.getElementById('player');
+  var first = document.getElementsByTagName('script')[0];
   first.parentNode.insertBefore(tag, first);
   var player;
   function onYoutubePlayerAPIReady() {
