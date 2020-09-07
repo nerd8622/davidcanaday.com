@@ -3,7 +3,7 @@ function createPlayer(){
   if (gParams.has('id')){ytId = gParams.get('id')}
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api"
-  var first = document.getElementsByTagName('link')[0];
+  var first = document.getElementById('player');
   first.parentNode.insertBefore(tag, first);
   var player;
   function onYoutubePlayerAPIReady() {
