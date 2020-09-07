@@ -9,6 +9,7 @@ function createPlayer(){
       height: '360',
       width: '640',
       videoId: ytId,
+      origin: "https://davidcanaday.com",
       modestbranding: '1',
       rel: '0'
     });
