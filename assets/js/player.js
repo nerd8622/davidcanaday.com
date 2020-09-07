@@ -1,4 +1,4 @@
-createPlayer(){
+function createPlayer(){
   const gParams = new URLSearchParams(window.location.search);
   if (gParams.has('id')){ytId = gParams.get('id')}
   var tag = document.createElement('script');
