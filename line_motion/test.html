@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div id="graph"></div>
   <script>
     var frames = [
   {name: 'sine', data: [{x: [], y: []}]},
@@ -43,8 +46,5 @@ Plotly.plot('graph', [{
   Plotly.addFrames('graph', frames);
 });
   </script>
-</head>
-<body>
-  <div id="graph"></div>
 </body>
 </html>
