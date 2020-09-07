@@ -1,5 +1,5 @@
 function createPlayer(){
-  conts gParams = new URLSearchParams(window.location.search);
+  const gParams = new URLSearchParams(window.location.search);
   if (gParams.has('id'){ytId = gParams.get('id')}
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/player_api"
