@@ -8,6 +8,7 @@ function createPlayer(){
   first.parentNode.insertBefore(tag, first);
   var player;
   function onYoutubePlayerAPIReady() {
+    console.log("started player")
     player = new YT.Player('player', {
       height: '360',
       width: '640',
