@@ -2,6 +2,8 @@
 <html lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="content-type">
   <meta name="description" content="Insert Description Here">
   <title>Tutorials</title>
+  <script type="text/javascript" src="https://www.youtube.com/player_api"></script>
+  <script type="text/javascript" src="/assets/js/player.js"></script>
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/fonts.css">
   <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
@@ -18,25 +20,6 @@
  </div>
   
  <div id="player"></div>
-  
-  <script>
-  const gParams = new URLSearchParams(window.location.search);
-  //if (gParams.has('id')){ytId = gParams.get('id')}
-  ytId = "";
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var first = document.getElementsByTagName('script')[0];
-  first.parentNode.insertBefore(tag, first);
-  var player;
-  function onYoutubePlayerAPIReady() {
-  console.log("started player")
-  player = new YT.Player('player', {
-    height: '360',
-    width: '640',
-    videoId: "hQfNtnKm5nA"
-  });
-  }
-  </script>
 
  </div>
   <div class="footer">
