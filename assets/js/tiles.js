@@ -17,7 +17,7 @@ function createTiles(file){
 
 function getText(){
     var request = new XMLHttpRequest();
-    request.open('GET', 'assets/other/tiles.txt', true);
+    request.open('GET', '/assets/other/tiles.txt', true);
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
