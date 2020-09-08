@@ -42,6 +42,9 @@ p,h1 {
 .content-item:hover {
   box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 7px 18px 0 rgba(0,0,0,0.1);
 }
+.player {
+  vertical-align: middle;
+}
 .navbar p, .navbar a, .footer a {
   display: block;
   text-align: center;
