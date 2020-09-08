@@ -7,7 +7,6 @@ p,h1 {
   padding-right: 1%;
 }
 .cover-img {
-  background-image: url(../../assets/images/main_cover.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
