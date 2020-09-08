@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/assets/other/tiles.txt
+permalink: /assets/other/tiles.txt
 ---
 test,test
 123,123
