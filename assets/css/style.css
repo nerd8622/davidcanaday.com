@@ -44,6 +44,7 @@ p,h1 {
 }
 .player {
   vertical-align: middle;
+  margin: auto;
 }
 .navbar p, .navbar a, .footer a {
   display: block;
