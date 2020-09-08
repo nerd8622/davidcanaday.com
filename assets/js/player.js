@@ -4,5 +4,7 @@ function createPlayer(){
   stag.src = "https://cdn.plyr.io/3.6.2/plyr.js";
   ltag.rel = "stylesheet";
   ltag.href = "https://cdn.plyr.io/3.6.2/plyr.css";
+  document.insertBefore(stag, document.getElementsByTagName('script')[0]);
+  document.insertBefore(ltag, document.getElementsByTagName('link')[0]);
   const player = new Plyr('#player');
 }
