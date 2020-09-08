@@ -32,11 +32,16 @@ p,h1 {
   width: 80%;
 }
 .content-item {
+  background-color: rgba(255,255,255,0.6);
   float: left;
   margin: 20px;
   padding: 24px 18px;
   width: 20%;
-  box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.7);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.content-item:hover {
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 7px 18px 0 rgba(0,0,0,0.1);
 }
 .navbar p, .navbar a, .footer a {
   display: block;
