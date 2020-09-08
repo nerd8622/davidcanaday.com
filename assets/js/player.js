@@ -6,7 +6,7 @@ function createPlayer(){
   var stag = document.createElement('script');
   var ltag = document.createElement('link');
   stag.src = "https://cdn.plyr.io/3.6.2/plyr.js";
-  stag.onload = loaded(stag);
+  stag.onload = function() {loaded(stag);};
   ltag.rel = "stylesheet";
   ltag.href = "https://cdn.plyr.io/3.6.2/plyr.css";
   document.head.insertBefore(stag, document.getElementsByTagName('script')[0]);
