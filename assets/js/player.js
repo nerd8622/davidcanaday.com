@@ -10,4 +10,5 @@ function related(){
   // get rid of the annoying related panel :)
   annoying = document.getElementsByClassName('ytp-pause-overlay')[0];
   annoying.parentElement.removeChild(annoying);
+  document.getElementById("ytplayer").onclick = null;
 }
