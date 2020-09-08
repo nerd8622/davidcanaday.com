@@ -8,7 +8,7 @@ function createPlayer(){
 }
 function related(){
   // get rid of the annoying related panel :)
-  document.body.getElementsByClassName('ytp-pause-overlay')[0];
+  document.getElementsByClassName('date-20200903')[0].getElementsByClassName('ytp-pause-overlay')[0];
   annoying.parentElement.removeChild(annoying);
   document.getElementById("ytplayer").onclick = null;
 }
