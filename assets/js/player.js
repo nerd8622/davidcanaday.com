@@ -3,8 +3,10 @@ function createPlayer(){
   const gParams = new URLSearchParams(window.location.search);
   if (gParams.has('id')){id = gParams.get('id')}
   // create the player
+  url = "https://www.youtube-nocookie.com/embed/" + id + "?controls=1&enablejsapi=1&modestbranding=1&showinfo=0&origin=https://www.davidcanaday.com&iv_load_policy=3&html5=1&fs=1&rel=0";
   player = document.getElementById("ytplayer");
-  player.src = "https://www.youtube-nocookie.com/embed/" + id + "?modestbranding=1&origin=https://davidcanaday.com&rel=0";
+  //fetch(url).then(res => {player.innerHTML = res;});
+  fetch(url).then(res => {testvar = res;});
 }
 function related(){
   // get rid of the annoying related panel :)
