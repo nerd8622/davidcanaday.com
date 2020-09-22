@@ -15,6 +15,13 @@ function startEntry(){
 
 function graphIt(latex){
   console.log(latex);
+  const node = math.parse(latex)
+  const code = node.compile()
+  let scope = {x: 3}
+  
+  scope.x = 1
+  console.log(code.evaluate(scope))
+  
   var frames = [
     {name: 'distance', data: [{x: [], y: []}]},
     {name: 'velocity', data: [{x: [], y: []}]},
