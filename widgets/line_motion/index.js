@@ -7,13 +7,14 @@ function startEntry(){
     handlers: {
       edit: function() { // useful event handlers
         var lat = mathField.latex();
-        graphIt(lat); // simple API
+        graphIt(latex_to_js(lat)); // simple API
       }
     }
   });
 }
 
 function graphIt(latex){
+  console.log(latex);
   var frames = [
     {name: 'distance', data: [{x: [], y: []}]},
     {name: 'velocity', data: [{x: [], y: []}]},
