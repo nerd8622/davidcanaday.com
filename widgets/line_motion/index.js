@@ -14,13 +14,15 @@ function startEntry(){
 }
 
 function graphIt(latex){
-  console.log(latex);
-  const node = math.parse(latex)
-  const code = node.compile()
-  let scope = {x: 3}
-  
-  scope.x = 1
-  console.log(code.evaluate(scope))
+  const dnode = math.parse(latex);
+  const distance = dnode.compile();
+  const vnode = math.derivative(dnode, 'x');
+  const velocity = vnode.compile();
+  const snode = math.abs(vnode);
+  const speed = snode.compile();
+  const anode = math.derivative(vnode, 'x');
+  const acceleration = anode.compile()
+  let scope = {x: 0};
   
   var frames = [
     {name: 'distance', data: [{x: [], y: []}]},
@@ -30,7 +32,25 @@ function graphIt(latex){
   ];
 
   //populate frames here
+  var n = 10.05;
+  for (var i = -10.05; i < n; i+=0.05) {
+      // distance:
+      scope.x = t
+      frames[0].data[0].x[i] = t;
+      frames[0].data[0].y[i] = distance.evaluate(scope)
 
+      // velocity:
+      frames[1].data[0].x[i] = t;
+      frames[1].data[0].y[i] = velocity.evaluate(scope);
+    
+      // speed:
+      frames[2].data[0].x[i] = t;
+      frames[2].data[0].y[i] = speed.evaluate(scope);
+    
+      // acceleration:
+      frames[3].data[0].x[i] = t;
+      frames[3].data[0].y[i] = acceleration.evaluate(scope);
+      
   Plotly.plot('graph', [{
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
