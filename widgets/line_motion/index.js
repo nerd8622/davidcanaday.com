@@ -75,8 +75,8 @@ function graphIt(latex){
     y: frames[0].data[0].y,
     line: {simplify: false},
   }], {
-    xaxis: {range: [-10, 10]},
-    yaxis: {range: [-15, 15]},
+    xaxis: {autorange: true},
+    yaxis: {autorange: true},
     updatemenus: [{
       buttons: [
         {method: 'animate', args: [['distance']], label: 'distance'},
