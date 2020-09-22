@@ -15,7 +15,6 @@ function startEntry(){
 
 function graphIt(latex){
   const dnode = math.parse(latex);
-  console.log(math.string(dnode));
   const distance = dnode.compile();
   const vnode = math.derivative(dnode, 'x');
   const velocity = vnode.compile();
@@ -52,7 +51,9 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  
+  console.log(math.string(dnode));
+  console.log(math.string(vnode));
+  console.log(math.string(anode));
   var dr = Algebrite.nroots(math.string(dnode));
   var vr = Algebrite.nroots(math.string(vnode));
   var ar = Algebrite.nroots(math.string(anode));
