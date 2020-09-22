@@ -7,10 +7,12 @@
   <script>
     var frames = [
   {name: 'velocity', data: [{x: [], y: []}]},
-  {name: 'speed', data: [{x: [], y: []}]}
+  {name: 'speed', data: [{x: [], y: []}]},
+  {name: 'distance', data: [{x: [], y: []}]},
+  {name: 'acceleration', data: [{x: [], y: []}]}
 ];
 
-var n = 100;
+var n = 1000;
 for (var i = 0; i < n; i++) {
   var t = i / (n - 1) * 2 - 1;
   
