@@ -55,8 +55,8 @@ function graphIt(latex){
   
   var dr = Algebrite.roots(math.string(dnode));
   console.log(dr);
-  var vr = Algebrite.roots(vnode);
-  var ar = Algebrite.roots(anode);
+  var vr = Algebrite.roots(math.string(vnode));
+  var ar = Algebrite.roots(math.string(anode));
   /*
   frames[0].data[1].x[0]
   frames[0].data[1].y[0]
