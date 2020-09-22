@@ -1,6 +1,6 @@
 //Line Motion
 
-var mathFieldSpan = document.getElementById('math-field');
+/*var mathFieldSpan = document.getElementById('math-field');
 var MQ = MathQuill.getInterface(2);
 var mathField = MQ.MathField(mathFieldSpan, {
   spaceBehavesLikeTab: true, // configurable
@@ -10,7 +10,7 @@ var mathField = MQ.MathField(mathFieldSpan, {
       graphIt(lat); // simple API
     }
   }
-});
+});*/
 
 function graphIt(latex){
   var frames = [
