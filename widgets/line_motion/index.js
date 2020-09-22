@@ -18,8 +18,6 @@ function graphIt(latex){
   const distance = dnode.compile();
   const vnode = math.derivative(dnode, 'x');
   const velocity = vnode.compile();
-  const snode = math.abs(vnode);
-  const speed = snode.compile();
   const anode = math.derivative(vnode, 'x');
   const acceleration = anode.compile()
   let scope = {x: 0};
@@ -45,7 +43,7 @@ function graphIt(latex){
     
       // speed:
       frames[2].data[0].x[i] = t;
-      frames[2].data[0].y[i] = speed.evaluate(scope);
+      frames[2].data[0].y[i] = math.abs(velocity.evaluate(scope));
     
       // acceleration:
       frames[3].data[0].x[i] = t;
