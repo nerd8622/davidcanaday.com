@@ -1,17 +1,16 @@
 //Line Motion
-function start(){
-  var mathFieldSpan = document.getElementById('math-field');
-  var MQ = MathQuill.getInterface(2);
-  var mathField = MQ.MathField(mathFieldSpan, {
-    spaceBehavesLikeTab: true, // configurable
-    handlers: {
-      edit: function() { // useful event handlers
-        var lat = mathField.latex();
-        graphIt(lat); // simple API
-      }
+
+var mathFieldSpan = document.getElementById('math-field');
+var MQ = MathQuill.getInterface(2);
+var mathField = MQ.MathField(mathFieldSpan, {
+  spaceBehavesLikeTab: true, // configurable
+  handlers: {
+    edit: function() { // useful event handlers
+      var lat = mathField.latex();
+      graphIt(lat); // simple API
     }
-  });
-}
+  }
+});
 
 function graphIt(latex){
   var frames = [
