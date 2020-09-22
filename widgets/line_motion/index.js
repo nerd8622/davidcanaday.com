@@ -23,10 +23,10 @@ function graphIt(latex){
   let scope = {x: 0};
   
   var frames = [
-    {name: 'distance', data: [{x: [], y: []}]},
-    {name: 'velocity', data: [{x: [], y: []}]},
-    {name: 'speed', data: [{x: [], y: []}]},
-    {name: 'acceleration', data: [{x: [], y: []}]}
+    {name: 'distance', data: [{x: [], y: []}, {x: [], y: []}]},
+    {name: 'velocity', data: [{x: [], y: []}, {x: [], y: []}]},
+    {name: 'speed', data: [{x: [], y: []}, {x: [], y: []}]},
+    {name: 'acceleration', data: [{x: [], y: []}, {x: [], y: []}]}
   ];
 
   //populate frames here
@@ -51,6 +51,24 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
+  
+  var dr = Algebrite.roots(dnode);
+  console.log(dr);
+  var vr = Algebrite.roots(vnode);
+  var ar = Algebrite.roots(anode);
+  /*
+  frames[0].data[1].x[0]
+  frames[0].data[1].y[0]
+  
+  frames[0].data[1].x[0]
+  frames[0].data[1].y[0]
+  
+  frames[0].data[1].x[0]
+  frames[0].data[1].y[0]
+  
+  frames[0].data[1].x[0]
+  frames[0].data[1].y[0]*/
+  
   Plotly.plot('graph', [{
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
