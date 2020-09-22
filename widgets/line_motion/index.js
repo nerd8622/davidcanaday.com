@@ -50,7 +50,7 @@ function graphIt(latex){
       // acceleration:
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
-      
+  }
   Plotly.plot('graph', [{
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
