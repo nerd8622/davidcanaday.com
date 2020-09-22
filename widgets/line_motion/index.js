@@ -51,12 +51,9 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  console.log(math.string(dnode));
-  console.log(math.string(vnode));
-  console.log(math.string(anode));
-  var dr = Algebrite.nroots(math.string(dnode)+"=0");
-  var vr = Algebrite.nroots(math.string(vnode)+"=0");
-  var ar = Algebrite.nroots(math.string(anode)+"=0");
+  var dr = Algebrite.nroots(latex);
+  var vr = Algebrite.nroots(Algebrite.d(latex));
+  var ar = Algebrite.nroots(Algrbrite.d(Algebrite.d(latex)));
   console.log(dr);
   console.log(vr);
   console.log(ar);
