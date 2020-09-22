@@ -5,12 +5,13 @@ var mathField = MQ.MathField(mathFieldSpan, {
   spaceBehavesLikeTab: true, // configurable
   handlers: {
     edit: function() { // useful event handlers
-      latexSpan.textContent = mathField.latex(); // simple API
+      var lat = mathField.latex();
+      graphIt(lat); // simple API
     }
   }
 });
 
-function graphIt(){
+function graphIt(latex){
   var frames = [
     {name: 'distance', data: [{x: [], y: []}]},
     {name: 'velocity', data: [{x: [], y: []}]},
