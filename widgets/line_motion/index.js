@@ -15,6 +15,7 @@ function startEntry(){
 
 function graphIt(latex){
   const dnode = math.parse(latex);
+  console.log(dnode);
   const distance = dnode.compile();
   const vnode = math.derivative(dnode, 'x');
   const velocity = vnode.compile();
