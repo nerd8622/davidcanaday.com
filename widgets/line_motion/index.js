@@ -30,23 +30,25 @@ function graphIt(latex){
   ];
 
   //populate frames here
-  var n = 10.05;
-  for (var i = -10.05; i < n; i+=0.05) {
+  var n = 200;
+  for (var i = 0; i < n; i++) {
+      var t = i/(n/10)-10;
+      
       // distance:
       scope.x = i
-      frames[0].data[0].x[i] = i;
+      frames[0].data[0].x[i] = t;
       frames[0].data[0].y[i] = distance.evaluate(scope)
 
       // velocity:
-      frames[1].data[0].x[i] = i;
+      frames[1].data[0].x[i] = t;
       frames[1].data[0].y[i] = velocity.evaluate(scope);
     
       // speed:
-      frames[2].data[0].x[i] = i;
+      frames[2].data[0].x[i] = t;
       frames[2].data[0].y[i] = math.abs(velocity.evaluate(scope));
     
       // acceleration:
-      frames[3].data[0].x[i] = i;
+      frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
   Plotly.plot('graph', [{
