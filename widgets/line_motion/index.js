@@ -54,9 +54,11 @@ function graphIt(latex){
   }
   
   var dr = Algebrite.nroots(math.string(dnode));
-  console.log(dr);
   var vr = Algebrite.nroots(math.string(vnode));
   var ar = Algebrite.nroots(math.string(anode));
+  console.log(dr);
+  console.log(vr);
+  console.log(ar);
   /*
   frames[0].data[1].x[0]
   frames[0].data[1].y[0]
