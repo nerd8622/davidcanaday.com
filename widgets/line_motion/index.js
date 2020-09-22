@@ -1,4 +1,15 @@
 //Line Motion
+var mathFieldSpan = document.getElementById('math-field');
+var MQ = MathQuill.getInterface(2);
+var mathField = MQ.MathField(mathFieldSpan, {
+  spaceBehavesLikeTab: true, // configurable
+  handlers: {
+    edit: function() { // useful event handlers
+      latexSpan.textContent = mathField.latex(); // simple API
+    }
+  }
+});
+
 function graphIt(){
   var frames = [
     {name: 'distance', data: [{x: [], y: []}]},
