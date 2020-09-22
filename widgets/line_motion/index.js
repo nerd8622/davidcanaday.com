@@ -53,10 +53,10 @@ function graphIt(latex){
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
   
-  var dr = Algebrite.roots(math.string(dnode));
+  var dr = Algebrite.nroots(math.string(dnode));
   console.log(dr);
-  var vr = Algebrite.roots(math.string(vnode));
-  var ar = Algebrite.roots(math.string(anode));
+  var vr = Algebrite.nroots(math.string(vnode));
+  var ar = Algebrite.nroots(math.string(anode));
   /*
   frames[0].data[1].x[0]
   frames[0].data[1].y[0]
