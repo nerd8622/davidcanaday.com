@@ -51,7 +51,7 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  var dr = nerdamer("roots("+latex+")").toDecimal().slice(1,-1).split(",");
+  /*var dr = nerdamer("roots("+latex+")").toDecimal().slice(1,-1).split(",");
   var vr = nerdamer("roots(diff("+latex+"))").toDecimal().slice(1,-1).split(",");
   var ar = nerdamer("roots(diff(diff("+latex+")))").toDecimal().slice(1,-1).split(",");
   var i = 0;
@@ -75,7 +75,7 @@ function graphIt(latex){
   frames[3].data[1].y[0] = 0
   }
   
-  console.log(frames[0][1]);
+  console.log(frames[0][1]);*/
   
   Plotly.plot('graph', [{
     x: frames[0].data[0].x,
