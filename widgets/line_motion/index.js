@@ -112,6 +112,6 @@ function graphIt(latex){
     }]
 	}).then(function() {
 		Plotly.addFrames('graph', frames);
-	};
+	});
 }
   
