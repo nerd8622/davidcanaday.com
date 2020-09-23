@@ -4,14 +4,13 @@ function createTiles(file){
     for (x in file) {
 		if (x == ""){continue;}
 	var a = document.createElement("A")
-    	var tile = document.createElement("DIV");
-    	tile.className="content-item";
-		x = file[x].split(',');
-        text = x[0]; 
-        url = x[1];
+	a.className="content-item";
+    var tile = document.createElement("DIV");
+	x = file[x].split(',');
+    text = x[0]; 
+    url = x[1];
 	image = document.createElement("IMG");
 	image.src = url+"tile.png";
-	image.style="width:300px;height:300px;";
 	par = document.createElement("P");
 	par.innerText = text;
 	button = document.createElement("BUTTON");
@@ -26,7 +25,7 @@ function createTiles(file){
 }
 
 function getText(page){
-	var file = "/assets/other/"+page+"_tiles.txt";
+var file = "/assets/other/"+page+"_tiles.txt";
     var request = new XMLHttpRequest();
     request.open('GET', file, true);
     request.send(null);
