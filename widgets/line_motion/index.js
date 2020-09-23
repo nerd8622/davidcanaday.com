@@ -77,7 +77,7 @@ function graphIt(latex){
   
   console.log(frames[0][1]);*/
   
-  Plotly.plot('graph', [{
+  Plotly.newPlot('graph', [{
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
     line: {simplify: false},
