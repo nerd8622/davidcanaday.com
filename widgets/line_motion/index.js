@@ -35,7 +35,7 @@ function graphIt(latex){
       var t = i/(n/10)-10;
       
       // distance:
-      scope.x = i
+      scope.x = t
       frames[0].data[0].x[i] = t;
       frames[0].data[0].y[i] = distance.evaluate(scope)
 
@@ -74,6 +74,8 @@ function graphIt(latex){
   frames[3].data[1].x[0] = ar[i]
   frames[3].data[1].y[0] = 0
   }
+  
+  console.log(frames[0][1]);
   
   Plotly.plot('graph', [{
     x: frames[0].data[0].x,
