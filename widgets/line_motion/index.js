@@ -51,9 +51,9 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  var dr = nerdamer("roots("+latex+")");
-  var vr = nerdamer("roots(diff("+latex+"))");
-  var ar = nerdamer("roots(diff(diff("+latex+")))");
+  var dr = nerdamer("roots("+latex+")").toDecimal().slice(1,-1).split(",");
+  var vr = nerdamer("roots(diff("+latex+"))").toDecimal().slice(1,-1).split(",");
+  var ar = nerdamer("roots(diff(diff("+latex+")))").toDecimal().slice(1,-1).split(",");
   var i = 0;
   while (i < dr.length){
   frames[0].data[1].x[i] = dr[i]
