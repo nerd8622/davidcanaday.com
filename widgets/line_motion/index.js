@@ -77,8 +77,8 @@ function graphIt(latex){
   
   var i = 0;
   while (i < ar.length){
-  frames[3].data[1].x[0] = parseFloat(ar[i]);
-  frames[3].data[1].y[0] = 0;
+  frames[3].data[1].x[i] = parseFloat(ar[i]);
+  frames[3].data[1].y[i] = 0;
   scope.x = ar[i];
   frames[1].data[2].x[i] = parseFloat(ar[i]);
   frames[1].data[2].y[i] = velocity.evaluate(scope);
@@ -90,8 +90,8 @@ function graphIt(latex){
   var i = 0;
   while (i < jr.length){
   scope.x = jr[i];
-  frames[3].data[2].x[0] = parseFloat(jr[i]);
-  frames[3].data[2].y[0] = acceleration.evaluate(scope);
+  frames[3].data[2].x[i] = parseFloat(jr[i]);
+  frames[3].data[2].y[i] = acceleration.evaluate(scope);
   i++
   }
   
