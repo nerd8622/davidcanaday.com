@@ -32,7 +32,7 @@ function graphIt(latex){
   //populate frames here
   var n = 200;
   for (var i = 0; i < n; i++) {
-      var t = i/(n/10)-10;
+      var t = i/(n/20)-10;
       
       // distance:
       scope.x = t
