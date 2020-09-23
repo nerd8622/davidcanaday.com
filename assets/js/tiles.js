@@ -1,18 +1,21 @@
 function createTiles(file){
     file = file.split('\n');
-    var x; var text; var img;
+    var x; var text; var img; var url;
     for (x in file) {
 		if (x == ""){continue;}
+	var a = document.createElement("A")
     	var tile = document.createElement("DIV");
     	tile.className="content-item";
 		x = file[x].split(',');
         text = x[0]; 
-        img = x[1];
+        url = x[1];
 	image = document.createElement("IMG");
-	image.src = img;
+	image.src = url+"tile.jpg";
 	tile.appendChild(image);
 	tile.appendChild(document.createTextNode(text));
-	document.getElementById("content").appendChild(tile);
+	a.href = url;
+	a.appendChild(tile);
+	document.getElementById("content").appendChild(a);
     } 
 }
 
