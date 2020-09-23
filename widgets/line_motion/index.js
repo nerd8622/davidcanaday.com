@@ -51,9 +51,9 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  var dr = Algebrite.nroots(latex);
-  var vr = Algebrite.nroots(Algebrite.derivative(latex));
-  var ar = Algebrite.nroots(Algrbrite.derivative(Algebrite.d(latex)));
+  var dr = nerdamer("roots("+latex+")");
+  var vr = nerdamer("roots(diff("+latex+"))");
+  var ar = nerdamer("roots(diff(diff("+latex+")))");
   console.log(dr);
   console.log(vr);
   console.log(ar);
