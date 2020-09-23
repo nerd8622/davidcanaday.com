@@ -101,6 +101,7 @@ function graphIt(latex){
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
     line: {simplify: false},
+    mode: 'lines',
     name: 'Function'},{
     x: frames[0].data[1].x,
     y: frames[0].data[1].y,
