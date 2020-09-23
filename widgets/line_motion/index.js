@@ -56,24 +56,24 @@ function graphIt(latex){
   var ar = nerdamer("roots(diff(diff("+latex+")))").evaluate().toDecimal().slice(1,-1).split(",");
   var i = 0;
   while (i < dr.length){
-  frames[0].data[1].x[i] = dr[i];
+  frames[0].data[1].x[i] = parseFloat(dr[i]);
   frames[0].data[1].y[i] = 0;
   i++;
   }
   
   var i = 0;
   while (i < vr.length){
-  frames[1].data[1].x[i] = vr[i];
+  frames[1].data[1].x[i] = parseFloat(vr[i]);
   frames[1].data[1].y[i] = 0;
     
-  frames[2].data[1].x[i] = vr[i];
+  frames[2].data[1].x[i] = parseFloat(vr[i]);
   frames[2].data[1].y[i] = 0;
   i++;
   }
   
   var i = 0;
   while (i < ar.length){
-  frames[3].data[1].x[0] = ar[i];
+  frames[3].data[1].x[0] = parseFloat(ar[i]);
   frames[3].data[1].y[0] = 0;
   i++;
   }
