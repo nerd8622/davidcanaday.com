@@ -10,7 +10,7 @@ function createTiles(file){
         text = x[0]; 
         url = x[1];
 	image = document.createElement("IMG");
-	image.src = url+"tile.jpg";
+	image.src = url+"tile.png";
 	tile.appendChild(image);
 	tile.appendChild(document.createTextNode(text));
 	a.href = url;
