@@ -1,6 +1,6 @@
 function createTiles(file){
     file = file.split('\n');
-    var x; var text; var img; var url; var image;
+    var x; var text; var img; var url; var image; var par; var button;
     for (x in file) {
 		if (x == ""){continue;}
 	var a = document.createElement("A")
@@ -12,8 +12,13 @@ function createTiles(file){
 	image = document.createElement("IMG");
 	image.src = url+"tile.png";
 	image.style="width:300px;height:300px;";
+	par = document.createElement("P");
+	par.innerText = text;
+	button = document.createElement("BUTTON");
+	button.innerHTML = "View";
 	tile.appendChild(image);
-	tile.appendChild(document.createTextNode(text));
+	tile.appendChild(par);
+	tile.appendChild(button);
 	a.href = url;
 	a.appendChild(tile);
 	document.getElementById("content").appendChild(a);
