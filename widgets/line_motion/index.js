@@ -101,7 +101,16 @@ function graphIt(latex){
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
     line: {simplify: false},
-  }], {
+    name: 'Function'},{
+    x: frames[0].data[1].x,
+    y: frames[0].data[1].y,
+    mode: 'markers',
+    name: 'Roots'},{
+    x: frames[0].data[0].x,
+    y: frames[0].data[0].y,
+    mode: 'markers',
+    name: 'Extrema'
+    }], {
     xaxis: {autorange: true},
     yaxis: {autorange: true},
     updatemenus: [{
@@ -115,36 +124,5 @@ function graphIt(latex){
   }, {displayModeBar: false}).then(function() {
     Plotly.addFrames('graph', frames);
   });
-  	Plotly.plot('graph', [{
-	x: frames[0].data[1].x,
-	y: frames[0].data[1].y}]);
-	mode: 'markers'}], {
-    updatemenus: [{
-      buttons: [
-        {method: 'animate', args: [['distance']], label: 'distance'},
-        {method: 'animate', args: [['velocity']], label: 'velocity'},
-        {method: 'animate', args: [['speed']], label: 'speed'},
-        {method: 'animate', args: [['acceleration']], label: 'acceleration'}
-      ]
-    }]
-	}).then(function() {
-		Plotly.addFrames('graph', frames);
-	};
-	
-  	Plotly.plot('graph', [{
-	x: frames[0].data[2].x,
-	y: frames[0].data[2].y}]);
-	mode: 'markers'}], {
-    updatemenus: [{
-      buttons: [
-        {method: 'animate', args: [['distance']], label: 'distance'},
-        {method: 'animate', args: [['velocity']], label: 'velocity'},
-        {method: 'animate', args: [['speed']], label: 'speed'},
-        {method: 'animate', args: [['acceleration']], label: 'acceleration'}
-      ]
-    }]
-	}).then(function() {
-		Plotly.addFrames('graph', frames);
-	};
 }
   
