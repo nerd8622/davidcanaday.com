@@ -57,18 +57,26 @@ function graphIt(latex){
   console.log(dr);
   console.log(vr);
   console.log(ar);
-  /*
-  frames[0].data[1].x[0]
-  frames[0].data[1].y[0]
+  var i = 0;
+  while (i < dr.length){
+  frames[0].data[1].x[i] = dr[i]
+  frames[0].data[1].y[i] = 0
+  }
   
-  frames[0].data[1].x[0]
-  frames[0].data[1].y[0]
+  var i = 0;
+  while (i < vr.length){
+  frames[1].data[1].x[i] = vr[i]
+  frames[1].data[1].y[i] = 0
+    
+  frames[2].data[1].x[i] = vr[i]
+  frames[2].data[1].y[i] = 0
+  }
   
-  frames[0].data[1].x[0]
-  frames[0].data[1].y[0]
-  
-  frames[0].data[1].x[0]
-  frames[0].data[1].y[0]*/
+  var i = 0;
+  while (i < ar.length){
+  frames[3].data[1].x[0] = ar[i]
+  frames[3].data[1].y[0] = 0
+  }
   
   Plotly.plot('graph', [{
     x: frames[0].data[0].x,
