@@ -23,10 +23,10 @@ function graphIt(latex){
   let scope = {x: 0};
   
   var frames = [
-    {name: 'distance', data: [{x: [], y: []}, {x: [], y: []}]},
-    {name: 'velocity', data: [{x: [], y: []}, {x: [], y: []}]},
-    {name: 'speed', data: [{x: [], y: []}, {x: [], y: []}]},
-    {name: 'acceleration', data: [{x: [], y: []}, {x: [], y: []}]}
+    {name: 'distance', data: [{x: [], y: []}, {x: [], y: []}, {x: [], y: []}]},
+    {name: 'velocity', data: [{x: [], y: []}, {x: [], y: []}, {x: [], y: []}]},
+    {name: 'speed', data: [{x: [], y: []}, {x: [], y: []}, {x: [], y: []}]},
+    {name: 'acceleration', data: [{x: [], y: []}, {x: [], y: []}, {x: [], y: []}]}
   ];
 
   //populate frames here
