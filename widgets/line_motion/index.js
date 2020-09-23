@@ -51,31 +51,34 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  /*var dr = nerdamer("roots("+latex+")").toDecimal().slice(1,-1).split(",");
+  var dr = nerdamer("roots("+latex+")").toDecimal().slice(1,-1).split(",");
   var vr = nerdamer("roots(diff("+latex+"))").toDecimal().slice(1,-1).split(",");
   var ar = nerdamer("roots(diff(diff("+latex+")))").toDecimal().slice(1,-1).split(",");
   var i = 0;
   while (i < dr.length){
-  frames[0].data[1].x[i] = dr[i]
-  frames[0].data[1].y[i] = 0
+  frames[0].data[1].x[i] = eval(dr[i]);
+  frames[0].data[1].y[i] = 0;
+  i++;
   }
   
   var i = 0;
   while (i < vr.length){
-  frames[1].data[1].x[i] = vr[i]
-  frames[1].data[1].y[i] = 0
+  frames[1].data[1].x[i] = eval(vr[i]);
+  frames[1].data[1].y[i] = 0;
     
-  frames[2].data[1].x[i] = vr[i]
-  frames[2].data[1].y[i] = 0
+  frames[2].data[1].x[i] = eval(vr[i]);
+  frames[2].data[1].y[i] = 0;
+  i++;
   }
   
   var i = 0;
   while (i < ar.length){
-  frames[3].data[1].x[0] = ar[i]
-  frames[3].data[1].y[0] = 0
+  frames[3].data[1].x[0] = eval(ar[i]);
+  frames[3].data[1].y[0] = 0;
+  i++;
   }
   
-  console.log(frames[0][1]);*/
+  console.log(frames[0][1]);
   
   Plotly.newPlot('graph', [{
     x: frames[0].data[0].x,
