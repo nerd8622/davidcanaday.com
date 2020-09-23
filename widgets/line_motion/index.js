@@ -54,6 +54,7 @@ function graphIt(latex){
   var dr = nerdamer("roots("+latex+")").evaluate().toDecimal().slice(1,-1).split(",");
   var vr = nerdamer("roots(diff("+latex+"))").evaluate().toDecimal().slice(1,-1).split(",");
   var ar = nerdamer("roots(diff(diff("+latex+")))").evaluate().toDecimal().slice(1,-1).split(",");
+  var jr = nerdamer("roots(diff(diff(diff("+latex+"))))").evaluate().toDecimal().slice(1,-1).split(",");
   var i = 0;
   while (i < dr.length){
   frames[0].data[1].x[i] = parseFloat(dr[i]);
@@ -65,6 +66,9 @@ function graphIt(latex){
   while (i < vr.length){
   frames[1].data[1].x[i] = parseFloat(vr[i]);
   frames[1].data[1].y[i] = 0;
+  scope.x = vr[i];
+  frames[0].data[2].x[i] = parseFloat(vr[i]);
+  frames[0].data[2].y[i] = distance.evaluate(scope);
     
   frames[2].data[1].x[i] = parseFloat(vr[i]);
   frames[2].data[1].y[i] = 0;
@@ -75,7 +79,20 @@ function graphIt(latex){
   while (i < ar.length){
   frames[3].data[1].x[0] = parseFloat(ar[i]);
   frames[3].data[1].y[0] = 0;
+  scope.x = ar[i];
+  frames[1].data[2].x[i] = parseFloat(ar[i]);
+  frames[1].data[2].y[i] = velocity.evaluate(scope);
+  frames[2].data[2].x[i] = parseFloat(ar[i]);
+  frames[2].data[2].y[i] = math.abs(velocity.evaluate(scope));
   i++;
+  }
+  
+  var i = 0;
+  while (i < jr.length){
+  scope.x = jr[i];
+  frames[3].data[2].x[0] = parseFloat(jr[i]);
+  frames[3].data[2].y[0] = acceleration.evaluate(scope);
+  i++
   }
   
   console.log(frames[0].data[1]);
@@ -101,17 +118,11 @@ function graphIt(latex){
   	Plotly.plot('graph', [{
 	x: frames[0].data[1].x,
 	y: frames[0].data[1].y,
-	mode: 'markers'}], {
-    updatemenus: [{
-      buttons: [
-        {method: 'animate', args: [['distance']], label: 'distance'},
-        {method: 'animate', args: [['velocity']], label: 'velocity'},
-        {method: 'animate', args: [['speed']], label: 'speed'},
-        {method: 'animate', args: [['acceleration']], label: 'acceleration'}
-      ]
-    }]
-	}).then(function() {
-		Plotly.addFrames('graph', frames);
-	});
+	mode: 'markers'}]);
+	
+	Plotly.plot('graph', [{
+	x: frames[0].data[1].x,
+	y: frames[0].data[1].y,
+	mode: 'markers'}]);
 }
   
