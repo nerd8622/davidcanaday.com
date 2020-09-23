@@ -3,24 +3,22 @@ function createTiles(file){
     var x; var text; var img; var url; var image; var par; var button;
     for (x in file) {
 		if (x == ""){continue;}
-	var a = document.createElement("A")
-	a.className="content-item";
-    var tile = document.createElement("DIV");
-	x = file[x].split(',');
-    text = x[0]; 
-    url = x[1];
-	image = document.createElement("IMG");
-	image.src = url+"tile.png";
-	par = document.createElement("P");
-	par.innerText = text;
-	button = document.createElement("BUTTON");
-	button.innerHTML = "View";
-	tile.appendChild(image);
-	tile.appendChild(par);
-	tile.appendChild(button);
-	a.href = url;
-	a.appendChild(tile);
-	document.getElementById("content").appendChild(a);
+		var tile = document.createElement("DIV");
+		tile.className="content-item";
+		x = file[x].split(',');
+		text = x[0]; 
+		url = x[1];
+		image = document.createElement("IMG");
+		image.src = url+"tile.png";
+		par = document.createElement("P");
+		par.innerText = text;
+		button = document.createElement("BUTTON");
+		button.innerHTML = "View";
+		tile.appendChild(image);
+		tile.appendChild(par);
+		tile.appendChild(button);
+		tile.onclick="location.href='"+url+"';"
+		document.getElementById("content").appendChild(tile);
     } 
 }
 
