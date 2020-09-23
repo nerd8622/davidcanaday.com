@@ -121,8 +121,8 @@ function graphIt(latex){
 	mode: 'markers'}]);
 	
 	Plotly.plot('graph', [{
-	x: frames[0].data[1].x,
-	y: frames[0].data[1].y,
+	x: frames[0].data[2].x,
+	y: frames[0].data[2].y,
 	mode: 'markers'}]);
 }
   
