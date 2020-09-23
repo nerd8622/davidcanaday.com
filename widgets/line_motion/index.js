@@ -54,9 +54,6 @@ function graphIt(latex){
   var dr = nerdamer("roots("+latex+")");
   var vr = nerdamer("roots(diff("+latex+"))");
   var ar = nerdamer("roots(diff(diff("+latex+")))");
-  console.log(dr);
-  console.log(vr);
-  console.log(ar);
   var i = 0;
   while (i < dr.length){
   frames[0].data[1].x[i] = dr[i]
