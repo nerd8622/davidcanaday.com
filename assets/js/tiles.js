@@ -2,9 +2,10 @@ function createTiles(file){
     file = file.split('\n');
     var x; var text; var img;
     for (x in file) {
+		if (x == ""){continue;}
     	var tile = document.createElement("DIV");
     	tile.className="content-item";
-	x = file[x].split(',');
+		x = file[x].split(',');
         text = x[0]; 
         img = x[1];
 	image = document.createElement("IMG");
@@ -15,9 +16,10 @@ function createTiles(file){
     } 
 }
 
-function getText(){
+function getText(page){
+	var file = "/assets/other/"+page+"_tiles.txt";
     var request = new XMLHttpRequest();
-    request.open('GET', '/assets/other/tiles.txt', true);
+    request.open('GET', page, true);
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
