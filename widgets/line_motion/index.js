@@ -98,5 +98,8 @@ function graphIt(latex){
   }, {displayModeBar: false}).then(function() {
     Plotly.addFrames('graph', frames);
   });
+  	Plotly.plot('graph', [{
+	x: frames[0].data[1].x,
+	y: frames[0].data[1].y}]);
 }
   
