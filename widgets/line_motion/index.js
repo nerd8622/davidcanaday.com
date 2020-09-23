@@ -107,8 +107,8 @@ function graphIt(latex){
     y: frames[0].data[1].y,
     mode: 'markers',
     name: 'Roots'},{
-    x: frames[0].data[0].x,
-    y: frames[0].data[0].y,
+    x: frames[0].data[2].x,
+    y: frames[0].data[2].y,
     mode: 'markers',
     name: 'Extrema'
     }], {
