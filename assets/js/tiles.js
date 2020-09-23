@@ -17,7 +17,7 @@ function createTiles(file){
 		tile.appendChild(image);
 		tile.appendChild(par);
 		tile.appendChild(button);
-		tile.onclick="location.href='"+url+"';"
+	    	tile.setAttribute("onclick","location.href='"+url+"';");
 		document.getElementById("content").appendChild(tile);
     } 
 }
