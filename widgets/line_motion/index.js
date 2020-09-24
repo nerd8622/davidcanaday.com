@@ -104,6 +104,13 @@ function graphIt(latex){
   i++
   }
   
+  //fix missing roots and extrema
+  for (var i=1; i<=2; i++;){
+    for (var n=0; n<=3; n++;){
+      if (frames[n].data[i].x.length <= 1){frames[n].data[i].x[0]=-15; frames[n].data[i].y[0]=0;}
+    }
+  }
+  
   Plotly.newPlot('graph', [{
     x: frames[0].data[0].x,
     y: frames[0].data[0].y,
