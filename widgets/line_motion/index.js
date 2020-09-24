@@ -8,14 +8,15 @@ function startEntry(){
     handlers: {
       edit: function() {
         var lat = mathField.latex();
-        graphIt(latex_to_js(lat));
+        graphIt(lat);
       }
     }
   });
   graphIt(mathField.latex());
 }
 
-function graphIt(latex){
+function graphIt(lat){
+  var latex = latex_to_js(lat);
   const dnode = math.parse(latex);
   const distance = dnode.compile();
   const vnode = math.derivative(dnode, 'x');
@@ -53,10 +54,10 @@ function graphIt(latex){
       frames[3].data[0].x[i] = t;
       frames[3].data[0].y[i] = acceleration.evaluate(scope);
   }
-  var dr = nerdamer("roots("+latex+")").evaluate().toDecimal().slice(1,-1).split(",");
-  var vr = nerdamer("roots(diff("+latex+"))").evaluate().toDecimal().slice(1,-1).split(",");
-  var ar = nerdamer("roots(diff(diff("+latex+")))").evaluate().toDecimal().slice(1,-1).split(",");
-  var jr = nerdamer("roots(diff(diff(diff("+latex+"))))").evaluate().toDecimal().slice(1,-1).split(",");
+  var dr = nerdamer("roots("+lat+")").evaluate().toDecimal().slice(1,-1).split(",");
+  var vr = nerdamer("roots(diff("+lat+"))").evaluate().toDecimal().slice(1,-1).split(",");
+  var ar = nerdamer("roots(diff(diff("+lat+")))").evaluate().toDecimal().slice(1,-1).split(",");
+  var jr = nerdamer("roots(diff(diff(diff("+lat+"))))").evaluate().toDecimal().slice(1,-1).split(",");
   
   var i = 0;
   while (i < dr.length){
