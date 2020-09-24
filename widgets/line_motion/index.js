@@ -11,6 +11,7 @@ function startEntry(){
       }
     }
   });
+  graphIt(mathField.latex());
 }
 
 function graphIt(latex){
