@@ -3,11 +3,12 @@ function startEntry(){
   var mathFieldSpan = document.getElementById('math-field');
   var MQ = MathQuill.getInterface(2);
   var mathField = MQ.MathField(mathFieldSpan, {
-    spaceBehavesLikeTab: true, // configurable
+    spaceBehavesLikeTab: true,
+    supSubsRequireOperand: true,
     handlers: {
-      edit: function() { // useful event handlers
+      edit: function() {
         var lat = mathField.latex();
-        graphIt(latex_to_js(lat)); // simple API
+        graphIt(latex_to_js(lat));
       }
     }
   });
