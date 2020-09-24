@@ -66,6 +66,7 @@ function graphIt(latex){
   i++;
   }
   
+  console.log(dr);
   console.log(frames[0].data[1]);
   
   var i = 0;
