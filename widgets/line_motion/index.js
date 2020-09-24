@@ -67,7 +67,7 @@ function graphIt(lat){
   i++;
   }
   
-  console.log(latex);
+  console.log(lat);
   console.log(dr);
   console.log(frames[0].data[1]);
   
