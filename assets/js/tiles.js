@@ -2,7 +2,7 @@ function createTiles(file){
     file = file.split('\n');
     var x; var text; var img; var url; var image; var par; var button;
     for (x in file) {
-		if (x.length <= 3){continue;}
+		if (x.length <= 3){console.log("oops"); continue;}
 		var tile = document.createElement("DIV");
 		tile.className="content-item";
 		x = file[x].split(',');
