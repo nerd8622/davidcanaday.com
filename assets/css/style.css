@@ -41,7 +41,7 @@ p,h1 {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.1);
   transition: 0.3s;
 }
-.content-item img {width: 16vw; height: 16vw;}
+.content-item img {width: 16vw; height: 16vw; object-fit: cover;}
 .content-item button{
   background-color: #E63946; 
   color: #F1FAEE; 
