@@ -19,7 +19,7 @@ p {font-size: 24px;}
   background-color: #1D3557;
 }
 #icon {padding: 14px 10px;}
-#logo {font-family: 'Exo 2', sans-serif;}
+#logo {font-family: 'Exo 2', sans-serif; font-size: 16px;}
 .navbar p {margin: 0px;}
 .navbar a {text-decoration: none; transition: 1s;}
 .navbar p, .navbar a {
