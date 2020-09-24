@@ -1,3 +1,4 @@
+//Line Motion
 function startEntry(){
   var mathFieldSpan = document.getElementById('math-field');
   var MQ = MathQuill.getInterface(2);
@@ -13,7 +14,6 @@ function startEntry(){
   graphIt(mathField.latex());
 }
 
-//Line Motion
 function graphIt(latex){
   const dnode = math.parse(latex);
   const distance = dnode.compile();
