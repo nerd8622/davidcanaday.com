@@ -31,9 +31,9 @@ function graphIt(latex){
   ];
 
   //populate frames here
-  var n = 200;
+  var n = 400;
   for (var i = 0; i < n; i++) {
-      var t = 2*(i/(n/20)-10);
+      var t = 2*(i/(n/40)-10);
       
       // distance:
       scope.x = t
