@@ -64,6 +64,8 @@ function graphIt(latex){
   i++;
   }
   
+  console.log(frames[0].data[1]);
+  
   var i = 0;
   while (i < vr.length){
   if(vr[i].includes("i")){i++; continue;}
