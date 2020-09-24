@@ -58,7 +58,7 @@ function graphIt(latex){
   var jr = nerdamer("roots(diff(diff(diff("+latex+"))))").evaluate().toDecimal().slice(1,-1).split(",");
   var i = 0;
   while (i < dr.length){
-  if(dr[i].includes("i")){continue;}
+  if(dr[i].includes("i")){continue; i++;}
   frames[0].data[1].x[i] = parseFloat(dr[i]);
   frames[0].data[1].y[i] = 0;
   i++;
@@ -66,7 +66,7 @@ function graphIt(latex){
   
   var i = 0;
   while (i < vr.length){
-  if(vr[i].includes("i")){continue;}
+  if(vr[i].includes("i")){continue; i++;}
   frames[1].data[1].x[i] = parseFloat(vr[i]);
   frames[1].data[1].y[i] = 0;
   scope.x = vr[i];
@@ -80,7 +80,7 @@ function graphIt(latex){
   
   var i = 0;
   while (i < ar.length){
-  if(ar[i].includes("i")){continue;}
+  if(ar[i].includes("i")){continue; i++;}
   frames[3].data[1].x[i] = parseFloat(ar[i]);
   frames[3].data[1].y[i] = 0;
   scope.x = ar[i];
@@ -93,7 +93,7 @@ function graphIt(latex){
   
   var i = 0;
   while (i < jr.length){
-  if(jr[i].includes("i")){continue;}
+  if(jr[i].includes("i")){continue; i++;}
   scope.x = jr[i];
   frames[3].data[2].x[i] = parseFloat(jr[i]);
   frames[3].data[2].y[i] = acceleration.evaluate(scope);
