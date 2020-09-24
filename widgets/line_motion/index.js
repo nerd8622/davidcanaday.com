@@ -1,19 +1,4 @@
 //Line Motion
-function startEntry(){
-  var mathFieldSpan = document.getElementById('math-field');
-  var MQ = MathQuill.getInterface(2);
-  var mathField = MQ.MathField(mathFieldSpan, {
-    spaceBehavesLikeTab: true, // configurable
-    handlers: {
-      edit: function() { // useful event handlers
-        var lat = mathField.latex();
-        graphIt(latex_to_js(lat)); // simple API
-      }
-    }
-  });
-  graphIt(mathField.latex());
-}
-
 function graphIt(latex){
   const dnode = math.parse(latex);
   const distance = dnode.compile();
@@ -131,4 +116,18 @@ function graphIt(latex){
     Plotly.addFrames('graph', frames);
   });
 }
-  
+
+function startEntry(){
+  var mathFieldSpan = document.getElementById('math-field');
+  var MQ = MathQuill.getInterface(2);
+  var mathField = MQ.MathField(mathFieldSpan, {
+    spaceBehavesLikeTab: true, // configurable
+    handlers: {
+      edit: function() { // useful event handlers
+        var lat = mathField.latex();
+        graphIt(latex_to_js(lat)); // simple API
+      }
+    }
+  });
+  graphIt(mathField.latex());
+}
