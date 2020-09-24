@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <meta name="description" content="Insert Description Here">
+  <title>Widgets</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.2.0/math.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nerdamer@1.1.5/nerdamer.core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nerdamer@1.1.5/Algebra.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nerdamer@1.1.5/Calculus.min.js"></script>
+  <link rel="stylesheet" href="/assets/mathquill/mathquill.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/assets/mathquill/mathquill.min.js"></script>
+  <script src="/assets/js/latex-to-js.js"></script>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+  <link rel="stylesheet" href="/assets/css/fonts.css"/>
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css"/>
+</head>
+<body onload="startEntry();">
+ <div class="navbar">
+   <p id="logo"><b>David Canaday</b></p>
+   <nav>
+     <a href="/" id="icon"><i class="fas fa-fw fa-home fa-lg"></i> </a>
+     <a href="/tutorials/">Tutorials</a>
+     <a href="/blog/">Blog</a>
+     <a href="/widgets/">Widgets</a>
+   </nav>
+ </div>
+  
+ <h1>Line Motion</h1>
+ <p>This widget was designed to help one gain an intuitive understanding of how distance, velocity, speed, and acceleration relate to each other.</p>
+ <p>Equation: <span id="math-field">x^4-5x^3+15x^2-x+7</span></p>
+ <div id="content">
+   <div id="graph"></div>
+ </div>
+  <div class="footer">
+  <a href="mailto://test@gmail.com">Contact Me</a>
+ </div class="footer">
+</body></html>

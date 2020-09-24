@@ -9,7 +9,7 @@ function createTiles(file){
 		text = x[0]; 
 		url = x[1];
 		image = document.createElement("IMG");
-		image.src = url+"tile.png";
+		image.src = url+"tile.jpg";
 		par = document.createElement("P");
 		par.innerText = text;
 		button = document.createElement("BUTTON");
