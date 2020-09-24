@@ -33,7 +33,7 @@ function graphIt(latex){
   //populate frames here
   var n = 200;
   for (var i = 0; i < n; i++) {
-      var t = i/(n/20)-10;
+      var t = 2*(i/(n/20)-10);
       
       // distance:
       scope.x = t
@@ -115,8 +115,8 @@ function graphIt(latex){
     mode: 'markers',
     name: 'Extrema'
     }], {
-    xaxis: {autorange: true},
-    yaxis: {autorange: true},
+    xaxis: {range: [-20, 20]},
+    yaxis: {range: [-50, 50]},
     updatemenus: [{
       buttons: [
         {method: 'animate', args: [['distance']], label: 'distance'},
