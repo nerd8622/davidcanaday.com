@@ -7,8 +7,7 @@ function startEntry(){
     supSubsRequireOperand: true,
     handlers: {
       edit: function() {
-        var lat = mathField.latex();
-        graphIt(latex_to_js(lat));
+        graphIt(mathField.latex());
       }
     }
   });
