@@ -105,8 +105,8 @@ function graphIt(latex){
   }
   
   //fix missing roots and extrema
-  for (var i=1; i<=2; i++;){
-    for (var n=0; n<=3; n++;){
+  for (var i=1; i<=2; i++){
+    for (var n=0; n<=3; n++){
       if (frames[n].data[i].x.length <= 1){frames[n].data[i].x[0]=-15; frames[n].data[i].y[0]=0;}
     }
   }
