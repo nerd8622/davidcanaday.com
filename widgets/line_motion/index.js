@@ -56,6 +56,7 @@ function graphIt(latex){
   var vr = nerdamer("roots(diff("+latex+"))").evaluate().toDecimal().slice(1,-1).split(",");
   var ar = nerdamer("roots(diff(diff("+latex+")))").evaluate().toDecimal().slice(1,-1).split(",");
   var jr = nerdamer("roots(diff(diff(diff("+latex+"))))").evaluate().toDecimal().slice(1,-1).split(",");
+  
   var i = 0;
   while (i < dr.length){
   if(dr[i].includes("i")){i++; continue;}
