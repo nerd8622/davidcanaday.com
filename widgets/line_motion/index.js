@@ -127,7 +127,7 @@ function graphIt(latex){
         {method: 'animate', args: [['acceleration']], label: 'acceleration'}
       ]
     }]
-  }, {displayModeBar: false}).then(function() {
+  }, {displayModeBar: false, responsive: true}).then(function() {
     Plotly.addFrames('graph', frames);
   });
 }
